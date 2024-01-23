@@ -1,5 +1,6 @@
-import { Outlet } from 'react-router-dom';
+import Lottie from 'lottie-react';
 import Sidebar from '../components/Dashboard/Sidebar/Sidebar';
+import houseRentAnimation from '../assets/houseAnim.json';
 
 const DashboardLayout = () => {
   return (
@@ -7,10 +8,12 @@ const DashboardLayout = () => {
       {/* Sidebar Component */}
       <Sidebar />
       {/* dashboard display */}
-      <div className="flex-1 md:ml-64 bg-teal-50">
-        <div className="p-5 ">
+      <div className="flex-1 md:ml-64 bg-sky-100">
+        <div className="p-5 flex items-center justify-center">
           {/* Outlet for dynamic contents */}
-          <Outlet />
+          <div className="max-w-2xl mt-16">
+            <Lottie animationData={houseRentAnimation} loop={true} />
+          </div>
         </div>
       </div>
     </div>

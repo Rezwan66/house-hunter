@@ -50,7 +50,7 @@ const Sidebar = () => {
       <div
         className={`z-10 md:fixed flex flex-col justify-between overflow-x-hidden bg-teal-100 w-64 space-y-6 px-2 py-4 absolute inset-y-0 left-0 transform ${
           isActive && '-translate-x-full'
-        }  md:translate-x-0  transition duration-200 ease-in-out`}
+        }  md:translate-x-0  transition duration-200 ease-in-out shadow-md`}
       >
         <div>
           <div className="w-full hidden md:flex px-4 py-2 shadow-lg rounded-lg justify-center items-center bg-teal-100 mx-auto">
