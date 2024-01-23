@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <>
       <div className="h-40 bg-teal-200">
-        <p className="text-xl text-center font-semibold my-10">
+        <p className="md:text-xl text-center font-semibold my-10">
           <span className="text-slate-500">
             {' '}
             <Typewriter

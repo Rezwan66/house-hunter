@@ -10,12 +10,15 @@ const MenuDropdown = () => {
   return (
     <div className="relative">
       <div className="flex flex-row items-center gap-3">
-        {/* Become A Host btn */}
-        {/* <div className="hidden md:block">
-          <button className="disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100 py-3 px-4 text-sm font-semibold rounded-full  transition">
-            Host your home
-          </button>
-        </div> */}
+        {/* Dashboard btn */}
+
+        <Link
+          to={'/dashboard'}
+          className="disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100 py-3 px-4 text-sm font-semibold rounded-full transition"
+        >
+          Dashboard
+        </Link>
+
         {/* Dropdown btn */}
         <div
           onClick={() => setIsOpen(!isOpen)}
@@ -50,10 +53,10 @@ const MenuDropdown = () => {
               Login
             </Link>
             <Link
-              to="/signup"
+              to="/register"
               className="px-4 py-3 hover:bg-neutral-100 transition font-semibold"
             >
-              Sign Up
+              Register
             </Link>
           </div>
         </div>
