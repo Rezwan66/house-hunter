@@ -5,7 +5,7 @@ const MainLayout = () => {
   return (
     <div>
       <NavBanner />
-      <div className="pt-24 min-h-[calc(100vh-68px)]">
+      <div className="py-10 min-h-[100vh]">
         <Outlet />
       </div>
       <Footer />
