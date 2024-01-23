@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import { getAllRooms } from '../api/houses';
 import Container from '../components/Container/Container';
 import HouseCard from '../components/Cards/HouseCard';
+import Spinner from '../components/Spinner';
 
 const Home = () => {
   const {
@@ -24,7 +25,7 @@ const Home = () => {
             ))}
           </div>
         ) : (
-          <div>Loading</div>
+          <Spinner />
         )}
       </Container>
     </>

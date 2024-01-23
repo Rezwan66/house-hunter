@@ -2,18 +2,21 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 export const AuthPage = ({ regState }) => {
   const [register, setRegister] = useState(regState);
+  //   const navigate = useNavigate();
   return (
-    <div className="mt-4 w-80 md:w-96 lg:w-[800px] mx-auto bg-white flex items-center relative overflow-hidden shadow-xl">
+    <div className=" w-80 md:w-96 lg:w-[1000px] mx-auto bg-teal-200 flex items-center relative overflow-hidden shadow-xl">
       {/* register form  */}
       <form
         className={`p-8 w-full ${
           register ? 'lg:translate-x-0' : 'lg:-translate-x-full hidden lg:block'
         } duration-500`}
       >
-        <h1 className="backdrop-blur-sm text-2xl lg:text-4xl pb-4">Register</h1>
+        <h1 className="backdrop-blur-sm text-2xl lg:text-4xl pb-4 text-center">
+          Register
+        </h1>
         <div className="space-y-5">
           <label htmlFor="name" className="block">
-            Name
+            Full Name
           </label>
           <input
             id="name"
@@ -21,13 +24,38 @@ export const AuthPage = ({ regState }) => {
             placeholder="John Doe"
             className="p-3 block w-full outline-none border rounded-md invalid:border-red-700 valid:border-black"
           />
+          <label htmlFor="role" className="block">
+            Role
+          </label>
+          <select
+            name="role"
+            id="role"
+            className="p-3 block w-full outline-none border rounded-md invalid:border-red-700 valid:border-black"
+            defaultValue={''}
+          >
+            <option disabled value="">
+              Select a role
+            </option>
+            <option value="owner">House Owner</option>
+            <option value="renter">House Renter</option>
+          </select>
+          <label htmlFor="phone" className="block">
+            Phone Number
+          </label>
+          <input
+            id="phone"
+            type="tel"
+            placeholder="(+880)"
+            className="p-3 block w-full outline-none border rounded-md invalid:border-red-700 valid:border-black"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          />
           <label htmlFor="u_email" className="block">
             Email
           </label>
           <input
             id="u_email"
             type="u_email"
-            placeholder="example@example.com"
+            placeholder="example@gmail.com"
             className="p-3 block w-full outline-none border rounded-md invalid:border-red-700 valid:border-black"
           />
           <label htmlFor="u_password" className="block">
@@ -36,8 +64,8 @@ export const AuthPage = ({ regState }) => {
           <input
             id="u_password"
             type="u_password"
-            placeholder=".............."
-            min={5}
+            placeholder="**********"
+            min={6}
             className="p-3 block w-full outline-none border rounded-md invalid:border-red-700 valid:border-black"
           />
         </div>
@@ -51,15 +79,16 @@ export const AuthPage = ({ regState }) => {
         <p className="mb-3 text-center">
           Already have an account?
           <Link
+            to={'/login'}
             onClick={() => {
               setRegister(!register);
+              //   navigate('/login');
             }}
             className="underline font-semibold"
           >
             Login
           </Link>
         </p>
-        <hr />
         <button
           type="button"
           className="py-2 px-5 mb-4 mt-8 mx-auto block shadow-lg border rounded-md border-black"
@@ -94,7 +123,9 @@ export const AuthPage = ({ regState }) => {
           register ? 'lg:translate-x-full hidden lg:block' : ''
         }`}
       >
-        <h1 className="backdrop-blur-sm text-2xl lg:text-4xl pb-4">Login</h1>
+        <h1 className="backdrop-blur-sm text-2xl lg:text-4xl pb-4 text-center">
+          Login
+        </h1>
         <div className="space-y-5">
           <label htmlFor="_email" className="block">
             Email
@@ -111,8 +142,8 @@ export const AuthPage = ({ regState }) => {
           <input
             id="_password"
             type="password"
-            placeholder=".............."
-            min={5}
+            placeholder="**********"
+            min={6}
             className="p-3 block w-full outline-none border rounded-md invalid:border-red-700 valid:border-black"
           />
         </div>
@@ -126,15 +157,16 @@ export const AuthPage = ({ regState }) => {
         <p className="mb-3 text-center">
           Don&apos;t have an account?
           <Link
+            to={'/register'}
             onClick={() => {
               setRegister(!register);
+              //   navigate('/register');
             }}
             className="underline font-semibold"
           >
             Register
           </Link>
         </p>
-        <hr />
         <button
           type="button"
           className="py-2 px-5 mb-4 mt-8 mx-auto block shadow-lg border rounded-md border-black"

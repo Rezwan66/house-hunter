@@ -27,11 +27,11 @@ const HouseCard = ({ house }) => {
         </div>
         <div className="font-semibold text-lg">{location}</div>
         <div className="font-light text-neutral-500">
-          5 nights . June 19 - 26
+          2 nights, 1 day . May 20 - 22
         </div>
         <div className="flex flex-row items-center gap-1">
-          <div className="font-semibold">$ {price}</div>
-          <div className="font-light">night</div>
+          <div className="md:text-lg font-semibold">$ {price}</div>
+          <div className="font-light">/ night</div>
         </div>
       </div>
     </div>
