@@ -7,9 +7,9 @@ import Spinner from '../components/Spinner';
 const Home = () => {
   const {
     data: houses = [],
-    error,
-    isPending,
-    refetch,
+    // error,
+    // isPending,
+    // refetch,
   } = useQuery({
     queryKey: ['houses'],
     queryFn: async () => await getAllRooms(),

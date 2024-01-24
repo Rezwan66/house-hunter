@@ -50,4 +50,9 @@ nodemon index.js
 
 ### Features & Functionalities
 
+- View and search for all available houses according to your needs
+- Personalized dashboard for House Renter and Owner
+
 ### Client Side Live Link
+
+[Netlify](https://papaya-trifle-9a61bd.netlify.app/) : https://papaya-trifle-9a61bd.netlify.app/
