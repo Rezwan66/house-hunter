@@ -4,7 +4,7 @@ export const AuthPage = ({ regState }) => {
   const [register, setRegister] = useState(regState);
   //   const navigate = useNavigate();
   return (
-    <div className=" w-80 md:w-96 lg:w-[1000px] mx-auto bg-teal-200 flex items-center relative overflow-hidden shadow-xl">
+    <div className="min-h-[100vh] w-80 md:w-96 lg:w-[1000px] mx-auto bg-teal-200 flex items-center relative overflow-hidden shadow-xl">
       {/* register form  */}
       <form
         className={`p-8 w-full ${
@@ -14,7 +14,7 @@ export const AuthPage = ({ regState }) => {
         <h1 className="backdrop-blur-sm text-2xl lg:text-4xl pb-4 text-center">
           Register
         </h1>
-        <div className="space-y-5">
+        <div className="space-y-2">
           <label htmlFor="name" className="block">
             Full Name
           </label>
@@ -77,7 +77,7 @@ export const AuthPage = ({ regState }) => {
           Submit
         </button>
         <p className="mb-3 text-center">
-          Already have an account?
+          Already have an account?{' '}
           <Link
             to={'/login'}
             onClick={() => {
@@ -152,10 +152,10 @@ export const AuthPage = ({ regState }) => {
           type="button"
           className="py-2 px-5 mb-4 mx-auto mt-8 shadow-lg border rounded-md border-black block"
         >
-          Submit
+          Login
         </button>
         <p className="mb-3 text-center">
-          Don&apos;t have an account?
+          Don&apos;t have an account?{' '}
           <Link
             to={'/register'}
             onClick={() => {
